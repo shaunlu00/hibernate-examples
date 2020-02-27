@@ -1,0 +1,35 @@
+plugins {
+    // Apply the java plugin to add support for Java
+    id 'java'
+}
+
+repositories {
+    // Use jcenter for resolving dependencies.
+    // You can declare any Maven/Ivy/file repository here.
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    // log
+    compile group: 'org.slf4j', name: 'slf4j-api', version:'1.7.25'
+    compile group: 'ch.qos.logback', name: 'logback-core', version: '1.2.3'
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+    // lombok
+    compile group: 'org.projectlombok', name: 'lombok', version: '1.18.10'
+    annotationProcessor 'org.projectlombok:lombok:1.18.10'
+    // hibernate
+    compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:'5.4.0.Final'
+    compile group: 'org.hibernate', name: 'hibernate-hikaricp', version:'5.4.0.Final'
+    compile group: 'org.hibernate', name: 'hibernate-envers', version:'5.4.0.Final'
+    // hikaricp
+    compile group: 'com.zaxxer', name: 'HikariCP', version:'3.3.1'
+    // liquibase
+    compile group: 'org.liquibase', name: 'liquibase-core', version:'3.4.1'
+    // h2
+    compile group: 'com.h2database', name: 'h2', version:'1.4.199'
+    // jackson
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.9'
+    // junit
+    testCompile group: 'junit', name: 'junit', version:'4.12'
+}
